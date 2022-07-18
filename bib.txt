@@ -1,0 +1,6 @@
+@inproceedings{harley2021track,
+  author    = {Adam W. Harley and Yiming Zuo and Jing Wen and Ayush Mangal and Shubhankar Potdar and Ritwick Chaudhry and Katerina Fragkiadaki},
+  title     = {Track, Check, Repeat: An EM Approach to Unsupervised Tracking},
+  booktitle = {CVPR},
+  year      = {2021}
+}
