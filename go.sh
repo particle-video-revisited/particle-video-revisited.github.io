@@ -1,14 +1,36 @@
 #!/bin/bash
 
-NAME=camel_mask
 # ffmpeg -i images/${NAME}.gif -filter:v fps=30 -c:v libx264 -pix_fmt yuv420p -crf 20 videos/${NAME}.mp4
 # ffmpeg -i images/${NAME}.gif -filter:v -c:v libx264 -pix_fmt yuv420p -crf 20 videos/${NAME}.mp4
 
-# ffmpeg -i images/${NAME}.gif -filter_complex "[0]reverse[r];[0][r]concat=n=2:v=1:a=0" loop.gif
+NAME=camel_mask
+ffmpeg -i images/${NAME}.gif -filter_complex "[0]reverse[r];[0][r]concat=n=2:v=1:a=0" images/${NAME}_loop.gif
+ffmpeg -r 12 -i images/${NAME}_loop.gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" videos/${NAME}_loop.mp4
+
+NAME=fish_mask
+ffmpeg -i images/${NAME}.gif -filter_complex "[0]reverse[r];[0][r]concat=n=2:v=1:a=0" images/${NAME}_loop.gif
+ffmpeg -r 12 -i images/${NAME}_loop.gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" videos/${NAME}_loop.mp4
+
+NAME=dancer_mask
+ffmpeg -i images/${NAME}.gif -filter_complex "[0]reverse[r];[0][r]concat=n=2:v=1:a=0" images/${NAME}_loop.gif
+ffmpeg -r 12 -i images/${NAME}_loop.gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" videos/${NAME}_loop.mp4
+
+NAME=horse_dense
+ffmpeg -i images/${NAME}.gif -filter_complex "[0]reverse[r];[0][r]concat=n=2:v=1:a=0" images/${NAME}_loop.gif
+ffmpeg -r 12 -i images/${NAME}_loop.gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" videos/${NAME}_loop.mp4
+
+NAME=judo_dense
+ffmpeg -i images/${NAME}.gif -filter_complex "[0]reverse[r];[0][r]concat=n=2:v=1:a=0" images/${NAME}_loop.gif
+ffmpeg -r 12 -i images/${NAME}_loop.gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" videos/${NAME}_loop.mp4
+
+NAME=duck_dense
+ffmpeg -i images/${NAME}.gif -filter_complex "[0]reverse[r];[0][r]concat=n=2:v=1:a=0" images/${NAME}_loop.gif
+ffmpeg -r 12 -i images/${NAME}_loop.gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" videos/${NAME}_loop.mp4
+
+
 # ffmpeg -i loop.gif -filter:v -c:v libx264 -pix_fmt yuv420p -crf 20 loop.mp4
 # ffmpeg -i loop.gif -filter:v fps=30 -c:v libx264 -pix_fmt yuv420p -crf 20 loop.mp4
 # ffmpeg -i loop.gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" loop.mp4
-# ffmpeg -r 12 -i loop.gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" loop.mp4
 
 
 
