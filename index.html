@@ -196,7 +196,7 @@
 	  </table>
 
 	  <!-- <p>Our model is trained once, on a large synthetic dataset.</p>n  -->
-	  <p>Our model can be deployed to track any number of pixels. Each pixel is tracked independently, but some computation is shared between them, so it is possible to track a large number in parallel. Below, we show particle trajectories at three different densities.</p>
+	  <p>We call our method <strong>Persistent Independent Particles</strong>, because we treat each pixel as if it is a particle with a long-range trajectory, and we track each particle <em>independently</em>. Some computation is shared between particles, which makes inference fast, but each particle produces its own trajectory, without inspecting the trajectories of its neighbors. A side-effect of this is that we may compute particle trajectories for any given subset of pixels. For the visualization below, we computed particles at three grids of different densities.</p>
 	  <table>
 	    <tr style="padding:0px">
 	      <td style="width:100%;vertical-align:middle">
