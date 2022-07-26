@@ -208,7 +208,7 @@
 	  </table>
 
 	  
-	  <p>Our method works by initializing a zero-velocity trajectory (copying the initial position across time), and then iteratively refining the trajectory, using local appearance costs, and a learned trajectory prior.</p>
+	  <p>Our method works by initializing a zero-velocity trajectory (copying the initial position across time), and then iteratively refining the trajectory, using local appearance costs, and a learned trajectory prior. Since our method reasons over multiple timesteps simultaneously, it "catch" a target after it re-emerges from an occluder, and inpaint the missing part of the trajectory.</p>
 	  <table>
 	    <tr style="padding:0px">
 	      <td style="width:100%;vertical-align:middle">
